@@ -2,9 +2,9 @@
 
 namespace BoutonPlace\LivewireDebugbar;
 
+use BoutonPlace\LivewireDebugbar\Commands\LivewireDebugbarCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use BoutonPlace\LivewireDebugbar\Commands\LivewireDebugbarCommand;
 
 class LivewireDebugbarServiceProvider extends PackageServiceProvider
 {

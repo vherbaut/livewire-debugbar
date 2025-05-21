@@ -2,9 +2,9 @@
 
 namespace BoutonPlace\LivewireDebugbar\Tests;
 
+use BoutonPlace\LivewireDebugbar\LivewireDebugbarServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use BoutonPlace\LivewireDebugbar\LivewireDebugbarServiceProvider;
 
 class TestCase extends Orchestra
 {
