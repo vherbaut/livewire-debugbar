@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace BoutonPlace\LivewireDebugbar\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LivewireDebugbarCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'LivewireDebugbar';
 
     public $description = 'My command';
 
