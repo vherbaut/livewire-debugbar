@@ -1,0 +1,1124 @@
+/* === COMPONENTS TAB SPECIFIC STYLES === */
+
+/* Quick Stats */
+.ldb-quick-stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 12px;
+  margin-right: 16px;
+}
+
+.ldb-quick-stats-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ldb-quick-stats-label {
+  color: var(--ldb-color-text-muted);
+}
+
+.ldb-quick-stats-value {
+  font-weight: 500;
+}
+
+.ldb-quick-stats-value--blue {
+  color: var(--ldb-color-accent-blue);
+}
+
+.ldb-quick-stats-value--green {
+  color: var(--ldb-color-accent-green);
+}
+
+.ldb-quick-stats-value--yellow {
+  color: var(--ldb-color-accent-yellow);
+}
+
+/* View Mode Toggle */
+.ldb-view-mode-toggle {
+  display: flex;
+  background: var(--ldb-color-bg-primary);
+  border-radius: var(--ldb-border-radius);
+  padding: 4px;
+}
+
+.ldb-view-mode-btn {
+  padding: 6px;
+  border-radius: var(--ldb-border-radius-small);
+  transition: all 0.2s ease;
+  color: var(--ldb-color-text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ldb-view-mode-btn:hover {
+  color: var(--ldb-color-text-secondary);
+}
+
+.ldb-view-mode-btn--active {
+  background: var(--ldb-color-bg-tertiary);
+  color: var(--ldb-color-accent-blue);
+}
+
+.ldb-view-mode-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Component Sort Select */
+.ldb-component-sort-select {
+  background: var(--ldb-color-bg-primary);
+  border: 1px solid var(--ldb-color-border);
+  border-radius: var(--ldb-border-radius);
+  padding: 6px 12px;
+  font-size: 12px;
+  color: var(--ldb-color-text-secondary);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.ldb-component-sort-select:focus {
+  outline: none;
+  border-color: var(--ldb-color-accent-blue);
+}
+
+/* Component Refresh Button */
+.ldb-component-refresh-btn {
+  padding: 8px;
+  background: var(--ldb-color-bg-primary);
+  border: none;
+  border-radius: var(--ldb-border-radius);
+  color: var(--ldb-color-text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ldb-component-refresh-btn:hover {
+  background: var(--ldb-color-bg-tertiary);
+  color: var(--ldb-color-text-primary);
+}
+
+.ldb-component-refresh-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Filter Tags */
+.ldb-filter-tags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ldb-filter-tags-label {
+  font-size: 12px;
+  color: var(--ldb-color-text-muted);
+}
+
+.ldb-filter-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  background: var(--ldb-color-bg-primary);
+  color: var(--ldb-color-text-secondary);
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.ldb-filter-tag-remove {
+  margin-left: 4px;
+  color: var(--ldb-color-text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ldb-filter-tag-remove:hover {
+  color: var(--ldb-color-text-secondary);
+}
+
+.ldb-filter-tag-remove svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* Components Container */
+.ldb-components-content {
+  padding: 16px;
+  overflow-y: auto;
+  height: calc(100% - 120px);
+}
+
+/* No Components State */
+.ldb-no-components {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 0;
+}
+
+.ldb-no-components-icon {
+  width: 64px;
+  height: 64px;
+  color: var(--ldb-color-border);
+  margin-bottom: 16px;
+}
+
+.ldb-no-components-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--ldb-color-text-muted);
+  margin-bottom: 8px;
+}
+
+.ldb-no-components-desc {
+  font-size: 14px;
+  color: var(--ldb-color-text-muted);
+  text-align: center;
+  max-width: 400px;
+}
+
+/* Cards View */
+.ldb-components-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 16px;
+}
+
+.ldb-component-card {
+  background: var(--ldb-color-bg-secondary);
+  border: 1px solid var(--ldb-color-border);
+  border-radius: var(--ldb-border-radius);
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.ldb-component-card:hover {
+  border-color: var(--ldb-color-border-hover);
+}
+
+.ldb-component-card--active {
+  box-shadow: 0 0 0 2px var(--ldb-color-accent-blue);
+}
+
+.ldb-component-card--critical {
+  border-color: var(--ldb-color-accent-red);
+}
+
+.ldb-component-card--warning {
+  border-color: var(--ldb-color-accent-yellow);
+}
+
+/* Component Card Header */
+.ldb-component-card-header {
+  padding: 16px;
+  border-bottom: 1px solid var(--ldb-color-border);
+}
+
+.ldb-component-card-header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.ldb-component-card-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ldb-component-card-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--ldb-color-bg-primary);
+  border-radius: var(--ldb-border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ldb-component-card-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--ldb-color-accent-blue);
+}
+
+.ldb-component-card-details h3 {
+  color: var(--ldb-color-text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.ldb-component-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ldb-component-card-id {
+  font-family: var(--ldb-font-mono);
+  font-size: 12px;
+  color: var(--ldb-color-text-muted);
+}
+
+.ldb-component-state-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.ldb-component-state-badge--active {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.ldb-component-state-badge--hydrating {
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+}
+
+.ldb-component-state-badge--dehydrated {
+  background: var(--ldb-color-bg-accent);
+  color: var(--ldb-color-text-secondary);
+}
+
+/* Component Actions */
+.ldb-component-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ldb-component-action-btn {
+  padding: 6px;
+  background: transparent;
+  border: none;
+  border-radius: var(--ldb-border-radius-small);
+  color: var(--ldb-color-text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ldb-component-action-btn:hover {
+  background: var(--ldb-color-bg-primary);
+  color: var(--ldb-color-text-primary);
+}
+
+.ldb-component-action-btn--blue:hover {
+  color: var(--ldb-color-accent-blue);
+}
+
+.ldb-component-action-btn--green:hover {
+  color: var(--ldb-color-accent-green);
+}
+
+.ldb-component-action-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Performance Badge */
+.ldb-performance-badge {
+  display: flex;
+  align-items: center;
+  padding: 2px 6px;
+  border-radius: var(--ldb-border-radius-small);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.ldb-performance-badge--error {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+}
+
+.ldb-performance-badge--warning {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fcd34d;
+}
+
+.ldb-performance-badge svg {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+}
+
+/* Component Properties Section */
+.ldb-component-properties {
+  padding: 16px;
+}
+
+/* Component Actions Bar */
+.ldb-component-actions-bar {
+  background: rgba(var(--ldb-color-bg-primary), 0.5);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--ldb-color-border);
+}
+
+.ldb-component-actions-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ldb-component-action-sm {
+  padding: 6px 12px;
+  background: var(--ldb-color-bg-tertiary);
+  border: none;
+  border-radius: var(--ldb-border-radius-small);
+  color: var(--ldb-color-text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ldb-component-action-sm:hover {
+  background: var(--ldb-color-bg-hover);
+}
+
+/* Tree View Styles */
+.ldb-tree-container {
+  background: var(--ldb-color-bg-secondary);
+  border: 1px solid var(--ldb-color-border);
+  border-radius: var(--ldb-border-radius);
+  padding: 16px;
+}
+
+.ldb-tree-node {
+  position: relative;
+}
+
+.ldb-tree-node-content {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: var(--ldb-border-radius);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.ldb-tree-node-content:hover {
+  background: var(--ldb-color-bg-primary);
+}
+
+.ldb-tree-node-content--active {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+.ldb-tree-node-content--critical {
+  border-left: 2px solid var(--ldb-color-accent-red);
+}
+
+.ldb-tree-node-content--warning {
+  border-left: 2px solid var(--ldb-color-accent-yellow);
+}
+
+.ldb-tree-expand-btn {
+  padding: 4px;
+  background: none;
+  border: none;
+  color: var(--ldb-color-text-muted);
+  cursor: pointer;
+  margin-right: 8px;
+  transition: transform 0.2s ease;
+}
+
+.ldb-tree-expand-btn--expanded {
+  transform: rotate(90deg);
+}
+
+.ldb-tree-expand-btn svg {
+  width: 12px;
+  height: 12px;
+}
+
+.ldb-tree-node-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--ldb-color-bg-primary);
+  border-radius: var(--ldb-border-radius-small);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.ldb-tree-node-icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--ldb-color-accent-blue);
+}
+
+.ldb-tree-node-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.ldb-tree-node-name {
+  font-weight: 500;
+  color: var(--ldb-color-text-primary);
+  margin-bottom: 4px;
+}
+
+.ldb-tree-node-stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--ldb-color-text-muted);
+}
+
+.ldb-tree-node-stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ldb-tree-node-stat svg {
+  width: 12px;
+  height: 12px;
+}
+
+.ldb-tree-node-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 16px;
+}
+
+.ldb-tree-children {
+  margin-left: 32px;
+}
+
+.ldb-tree-properties {
+  margin-left: 32px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background: rgba(var(--ldb-color-bg-primary), 0.5);
+  border-radius: var(--ldb-border-radius);
+  padding: 12px;
+}
+
+/* List View Styles */
+.ldb-list-container {
+  background: var(--ldb-color-bg-secondary);
+  border: 1px solid var(--ldb-color-border);
+  border-radius: var(--ldb-border-radius);
+  overflow: hidden;
+}
+
+.ldb-list-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.ldb-list-thead {
+  background: var(--ldb-color-bg-primary);
+  border-bottom: 1px solid var(--ldb-color-border);
+}
+
+.ldb-list-th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ldb-color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ldb-list-th--center {
+  text-align: center;
+}
+
+.ldb-list-th--right {
+  text-align: right;
+}
+
+.ldb-list-tbody {
+  background: var(--ldb-color-bg-secondary);
+}
+
+.ldb-list-tr {
+  border-bottom: 1px solid var(--ldb-color-border);
+  transition: background-color 0.2s ease;
+}
+
+.ldb-list-tr:hover {
+  background: rgba(var(--ldb-color-bg-hover), 0.3);
+}
+
+.ldb-list-tr--active {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+.ldb-list-td {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--ldb-color-text-primary);
+}
+
+.ldb-list-td--center {
+  text-align: center;
+}
+
+.ldb-list-td--right {
+  text-align: right;
+}
+
+.ldb-list-component-name {
+  font-weight: 500;
+  color: var(--ldb-color-text-primary);
+  margin-bottom: 2px;
+}
+
+.ldb-list-component-id {
+  font-family: var(--ldb-font-mono);
+  font-size: 12px;
+  color: var(--ldb-color-text-muted);
+}
+
+.ldb-list-issues {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.ldb-issue-count {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 6px;
+  border-radius: var(--ldb-border-radius-small);
+  font-size: 12px;
+  font-weight: 500;
+  min-width: 18px;
+  text-align: center;
+}
+
+.ldb-issue-count--critical {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+}
+
+.ldb-issue-count--warning {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fcd34d;
+}
+
+.ldb-list-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .ldb-components-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .ldb-quick-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .ldb-component-card-header-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ldb-filter-bar {
+    padding: 12px;
+  }
+
+  .ldb-components-content {
+    padding: 12px;
+  }
+
+  .ldb-tree-node-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .ldb-component-card-actions {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .ldb-list-table {
+    font-size: 12px;
+  }
+
+  .ldb-list-th,
+  .ldb-list-td {
+    padding: 8px 12px;
+  }
+}
+
+/* === ADDITIONAL COMPONENT SPECIFIC STYLES === */
+
+/* Quick Stats Grid for Expanded Content */
+.ldb-quick-stats-grid {
+    background-color: #111827;
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+}
+
+.ldb-quick-stats-grid-inner {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.ldb-stats-item {
+    background-color: #030712;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+}
+
+.ldb-stats-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.ldb-stats-value {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #d1d5db;
+}
+
+/* Expanded Content */
+.ldb-expanded-content {
+    border-top: 1px solid #374151;
+}
+
+.ldb-expanded-content-inner {
+    padding: 1rem;
+}
+
+/* Component Actions Bar - Extended Styles */
+.ldb-component-actions-bg {
+    background-color: rgba(3, 7, 18, 0.5);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #374151;
+}
+
+.ldb-component-actions-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Tree View - Extended Styles */
+.ldb-tree-view {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.ldb-tree-node-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.ldb-tree-node-item:hover {
+    background-color: #030712;
+}
+
+.ldb-tree-node-item.active {
+    background-color: rgba(29, 78, 216, 0.2);
+}
+
+.ldb-tree-node-item.critical {
+    border-left: 2px solid #ef4444;
+}
+
+.ldb-tree-node-item.warning {
+    border-left: 2px solid #eab308;
+}
+
+.ldb-tree-expand-btn {
+    margin-right: 0.5rem;
+    padding: 0.125rem;
+    border-radius: 0.25rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.ldb-tree-expand-btn:hover {
+    background-color: #374151;
+}
+
+.ldb-tree-expand-icon {
+    width: 1rem;
+    height: 1rem;
+    color: #9ca3af;
+    transition: transform 0.15s ease-in-out;
+}
+
+.ldb-tree-expand-icon.rotated {
+    transform: rotate(90deg);
+}
+
+.ldb-tree-spacer {
+    width: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.ldb-tree-component-icon {
+    width: 2rem;
+    height: 2rem;
+    background-color: #030712;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+}
+
+.ldb-tree-component-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.ldb-tree-component-name {
+    font-weight: 500;
+    color: #e5e7eb;
+}
+
+.ldb-tree-component-id {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.ldb-tree-component-state {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.ldb-tree-component-state.active {
+    background-color: #14532d;
+    color: #86efac;
+}
+
+.ldb-tree-component-state.hydrating {
+    background-color: #713f12;
+    color: #fde047;
+}
+
+.ldb-tree-component-state.dehydrated {
+    background-color: #374151;
+    color: #d1d5db;
+}
+
+.ldb-tree-component-stats {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+.ldb-tree-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.ldb-tree-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-left: 1rem;
+}
+
+.ldb-tree-perf-badge {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+}
+
+.ldb-tree-perf-badge.error {
+    background-color: rgba(127, 29, 29, 0.5);
+    color: #fca5a5;
+}
+
+.ldb-tree-perf-badge.warning {
+    background-color: rgba(120, 53, 15, 0.5);
+    color: #fde047;
+}
+
+.ldb-tree-action-btn {
+    padding: 0.375rem;
+    border-radius: 0.25rem;
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.ldb-tree-action-btn:hover {
+    background-color: #374151;
+    color: #60a5fa;
+}
+
+.ldb-tree-action-btn.refresh:hover {
+    color: #e5e7eb;
+}
+
+.ldb-tree-props-section {
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: rgba(3, 7, 18, 0.5);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+}
+
+.ldb-tree-children {
+    margin-left: 1.5rem;
+}
+
+.ldb-tree-child {
+    margin-top: 0.25rem;
+}
+
+.ldb-tree-line {
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.ldb-tree-line-border {
+    width: 1rem;
+    border-left: 1px solid #4b5563;
+    border-bottom: 1px solid #4b5563;
+    height: 1.5rem;
+    margin-top: -0.75rem;
+}
+
+.ldb-tree-child-props {
+    margin-left: 3.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: rgba(3, 7, 18, 0.5);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+}
+
+/* List View - Extended Styles */
+.ldb-list-view {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.ldb-list-table {
+    width: 100%;
+}
+
+.ldb-list-thead {
+    background-color: #030712;
+    border-bottom: 1px solid #374151;
+}
+
+.ldb-list-th {
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.ldb-list-th.left {
+    text-align: left;
+}
+
+.ldb-list-th.center {
+    text-align: center;
+}
+
+.ldb-list-th.right {
+    text-align: right;
+}
+
+.ldb-list-tbody {
+    background-color: #111827;
+}
+
+.ldb-list-tbody tr {
+    border-bottom: 1px solid #374151;
+}
+
+.ldb-list-tr {
+    transition: background-color 0.15s ease-in-out;
+}
+
+.ldb-list-tr:hover {
+    background-color: rgba(3, 7, 18, 0.5);
+}
+
+.ldb-list-tr.active {
+    background-color: rgba(29, 78, 216, 0.2);
+}
+
+.ldb-list-td {
+    padding: 0.75rem 1rem;
+}
+
+.ldb-list-component-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #e5e7eb;
+}
+
+.ldb-list-component-id {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.ldb-list-state-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.ldb-list-state-badge.active {
+    background-color: #14532d;
+    color: #86efac;
+}
+
+.ldb-list-state-badge.hydrating {
+    background-color: #713f12;
+    color: #fde047;
+}
+
+.ldb-list-state-badge.dehydrated {
+    background-color: #374151;
+    color: #d1d5db;
+}
+
+.ldb-list-text-center {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #9ca3af;
+}
+
+.ldb-list-text-right {
+    text-align: right;
+}
+
+.ldb-list-issues {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.ldb-list-issue-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.ldb-list-issue-badge.critical {
+    background-color: #7f1d1d;
+    color: #fca5a5;
+}
+
+.ldb-list-issue-badge.warning {
+    background-color: #78350f;
+    color: #fde047;
+}
+
+.ldb-list-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.25rem;
+}
+
+.ldb-list-action-btn {
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.ldb-list-action-btn:hover {
+    background-color: #374151;
+}
+
+.ldb-list-action-btn.view:hover,
+.ldb-list-action-btn.focus:hover {
+    color: #60a5fa;
+}
+
+.ldb-list-action-btn.refresh:hover {
+    color: #22c55e;
+}

@@ -1,0 +1,458 @@
+/* Properties Component Styles */
+
+/* Header Section */
+.ldb-properties-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.ldb-properties-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.ldb-properties-count {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* Properties Container */
+.ldb-properties-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Property Item */
+.ldb-property-item {
+    background-color: #111827;
+    border-radius: 0.25rem;
+    border: 1px solid #374151;
+    transition: border-color 0.15s;
+}
+
+.ldb-property-item:hover {
+    border-color: #4b5563;
+}
+
+/* Property Header */
+.ldb-property-header {
+    padding: 0.75rem;
+    border-bottom: 1px solid #374151;
+}
+
+.ldb-property-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ldb-property-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ldb-property-name {
+    font-family: monospace;
+    color: #93c5fd;
+    font-weight: 500;
+}
+
+/* Property Badges */
+.ldb-property-badge {
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.ldb-property-badge--locked {
+    background-color: #059669;
+    color: white;
+}
+
+.ldb-property-badge--unlocked {
+    background-color: #d97706;
+    color: black;
+}
+
+.ldb-property-badge--model {
+    background-color: #7c3aed;
+    color: white;
+}
+
+.ldb-property-badge--lazy {
+    background-color: #4f46e5;
+    color: white;
+}
+
+.ldb-property-badge--reactive {
+    background-color: #ec4899;
+    color: white;
+}
+
+.ldb-property-badge--security-risk {
+    background-color: #dc2626;
+    color: white;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Property Meta Info */
+.ldb-property-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* Property Type Badge */
+.ldb-property-type {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    text-transform: capitalize;
+}
+
+.ldb-property-type--string {
+    background-color: #1e3a8a;
+    color: #93c5fd;
+}
+
+.ldb-property-type--number {
+    background-color: #14532d;
+    color: #86efac;
+}
+
+.ldb-property-type--boolean {
+    background-color: #581c87;
+    color: #c084fc;
+}
+
+.ldb-property-type--array {
+    background-color: #7c2d12;
+    color: #fdba74;
+}
+
+.ldb-property-type--object {
+    background-color: #831843;
+    color: #f9a8d4;
+}
+
+.ldb-property-type--null {
+    background-color: #374151;
+    color: #d1d5db;
+}
+
+.ldb-property-size {
+    color: #9ca3af;
+}
+
+/* Property Actions */
+.ldb-property-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.ldb-property-action-btn {
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    color: #9ca3af;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.ldb-property-action-btn:hover {
+    background-color: #374151;
+    color: #d1d5db;
+}
+
+.ldb-property-action-btn:hover.ldb-property-action-btn--copy {
+    color: #10b981;
+}
+
+.ldb-property-action-btn svg {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+/* Property Value Section */
+.ldb-property-value {
+    padding: 0.75rem;
+}
+
+/* Edit Mode Container */
+.ldb-property-edit-container {
+    background-color: #030712;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #4b5563;
+    transition: border-color 0.15s;
+}
+
+.ldb-property-edit-container--error {
+    border-color: #dc2626;
+}
+
+.ldb-property-edit-container--saved {
+    border-color: #059669;
+}
+
+/* Edit Header */
+.ldb-property-edit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #374151;
+    padding-bottom: 0.75rem;
+}
+
+.ldb-property-edit-header-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ldb-property-edit-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #e5e7eb;
+}
+
+.ldb-property-edit-saved {
+    font-size: 0.75rem;
+    color: #10b981;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.ldb-property-edit-saved svg {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+.ldb-property-edit-error {
+    font-size: 0.75rem;
+    color: #ef4444;
+}
+
+/* Save Button */
+.ldb-property-save-btn {
+    position: relative;
+    padding: 0.375rem 1rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.ldb-property-save-btn:hover:not(:disabled) {
+    background-color: #1d4ed8;
+}
+
+.ldb-property-save-btn:disabled {
+    background-color: #4b5563;
+    cursor: not-allowed;
+}
+
+.ldb-property-save-btn svg {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+.ldb-property-save-btn svg.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Fields List */
+.ldb-property-fields {
+    margin-top: 0.75rem;
+    max-height: 24rem;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.ldb-property-fields-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Field Item */
+.ldb-property-field {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.15s;
+}
+
+.ldb-property-field:hover {
+    background-color: rgba(31, 41, 55, 0.5);
+}
+
+.ldb-property-field-label {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    font-family: monospace;
+    min-width: 120px;
+}
+
+/* Field Inputs */
+.ldb-property-field-input {
+    flex: 1;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    background-color: #111827;
+    border: 1px solid #4b5563;
+    border-radius: 0.25rem;
+    color: white;
+    transition: all 0.2s;
+}
+
+.ldb-property-field-input:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: #3b82f6;
+    border-color: transparent;
+}
+
+.ldb-property-field-input:hover:not(:focus) {
+    border-color: #6b7280;
+}
+
+.ldb-property-field-input--error {
+    border-color: #ef4444;
+}
+
+/* Field Type Badge */
+.ldb-property-field-type {
+    font-size: 0.75rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    text-transform: capitalize;
+}
+
+.ldb-property-field-type--string {
+    background-color: #1e3a8a;
+    color: #93c5fd;
+}
+
+.ldb-property-field-type--number {
+    background-color: #14532d;
+    color: #86efac;
+}
+
+.ldb-property-field-type--boolean {
+    background-color: #581c87;
+    color: #c084fc;
+}
+
+.ldb-property-field-type--null {
+    background-color: #374151;
+    color: #d1d5db;
+}
+
+/* Display Mode (Read-only) */
+.ldb-property-display {
+    font-family: monospace;
+    color: #9ca3af;
+    font-size: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.ldb-property-display-code {
+    white-space: pre-wrap;
+    overflow-x: auto;
+    max-height: 16rem;
+    overflow-y: auto;
+    background-color: #111827;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+}
+
+/* Scrollbar Styling */
+.ldb-property-fields::-webkit-scrollbar,
+.ldb-property-display-code::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.ldb-property-fields::-webkit-scrollbar-track,
+.ldb-property-display-code::-webkit-scrollbar-track {
+    background-color: #1f2937;
+    border-radius: 0.25rem;
+}
+
+.ldb-property-fields::-webkit-scrollbar-thumb,
+.ldb-property-display-code::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+    border-radius: 0.25rem;
+}
+
+.ldb-property-fields::-webkit-scrollbar-thumb:hover,
+.ldb-property-display-code::-webkit-scrollbar-thumb:hover {
+    background-color: #6b7280;
+}
+
+/* Tooltip styles (reusing from main styles) */
+.livewire-debugbar__tooltip {
+    position: relative;
+}
+
+.livewire-debugbar__tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-0.25rem);
+    background-color: #1f2937;
+    color: #e5e7eb;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    z-index: 50;
+}
+
+.livewire-debugbar__tooltip:hover::before {
+    opacity: 1;
+}

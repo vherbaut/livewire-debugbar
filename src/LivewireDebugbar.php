@@ -1,5 +1,5 @@
 <?php
 
-namespace BoutonPlace\LivewireDebugbar;
+namespace Vherbaut\LivewireDebugbar;
 
 class LivewireDebugbar {}

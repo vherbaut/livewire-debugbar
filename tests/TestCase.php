@@ -1,10 +1,10 @@
 <?php
 
-namespace BoutonPlace\LivewireDebugbar\Tests;
+namespace Vherbaut\LivewireDebugbar\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use BoutonPlace\LivewireDebugbar\LivewireDebugbarServiceProvider;
+use Vherbaut\LivewireDebugbar\LivewireDebugbarServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'BoutonPlace\\LivewireDebugbar\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Vherbaut\\LivewireDebugbar\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

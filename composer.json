@@ -1,24 +1,26 @@
 {
-    "name": "boutonPlace/livewire-debugbar",
-    "description": ":package_description",
+    "name": "vherbaut/livewire-debugbar",
+    "description": "Debugbar for Livewire",
     "keywords": [
-        ":vendor_name",
+        "vherbaut",
         "laravel",
         "livewire-debugbar"
     ],
-    "homepage": "https://github.com/boutonPlace/livewire-debugbar",
+    "homepage": "https://github.com/vherbaut/livewire-debugbar",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Vincent Herbaut",
+            "email": "vincenth.lzh@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.2",
-        "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^10.0||^11.0||^12.0"
+        "illuminate/contracts": "^10.0||^11.0||^12.0",
+        "laravel/framework": "^10.0|^11.0",
+        "livewire/livewire": "^3.0",
+        "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
         "laravel/pint": "^1.14",
@@ -35,13 +37,13 @@
     },
     "autoload": {
         "psr-4": {
-            "BoutonPlace\\LivewireDebugbar\\": "src/",
-            "BoutonPlace\\LivewireDebugbar\\Database\\Factories\\": "database/factories/"
+            "Vherbaut\\LivewireDebugbar\\": "src/",
+            "Vherbaut\\LivewireDebugbar\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BoutonPlace\\LivewireDebugbar\\Tests\\": "tests/",
+            "Vherbaut\\LivewireDebugbar\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -63,10 +65,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "BoutonPlace\\LivewireDebugbar\\LivewireDebugbarServiceProvider"
+                "Vherbaut\\LivewireDebugbar\\LivewireDebugbarServiceProvider"
             ],
             "aliases": {
-                "LivewireDebugbar": "BoutonPlace\\LivewireDebugbar\\Facades\\LivewireDebugbar"
+                "LivewireDebugbar": "Vherbaut\\LivewireDebugbar\\Facades\\LivewireDebugbar"
             }
         }
     },
