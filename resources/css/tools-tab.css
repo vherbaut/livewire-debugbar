@@ -1,0 +1,504 @@
+/* Tools Tab Styles */
+
+/* Main Container */
+.tools-container {
+    @apply p-6 space-y-6;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Tool Card */
+.tool-card {
+    @apply bg-gray-950 rounded-lg border border-gray-700;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.tool-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.16), 0 4px 6px rgba(0, 0, 0, 0.23);
+    @apply border-gray-600;
+}
+
+.tool-card-header {
+    @apply p-4 border-b border-gray-700 bg-gray-900;
+}
+
+.tool-card-title {
+    @apply flex items-center justify-between;
+}
+
+.tool-card-title h3 {
+    @apply text-lg font-semibold text-gray-200 flex items-center gap-2;
+}
+
+.tool-card-description {
+    @apply text-sm text-gray-400 mt-1;
+}
+
+.tool-card-body {
+    @apply p-4;
+}
+
+/* Time Travel Tool */
+.time-travel-container {
+    @apply space-y-4;
+}
+
+.time-travel-controls {
+    @apply flex items-center justify-between gap-4;
+}
+
+.time-travel-timeline {
+    @apply relative;
+}
+
+.timeline-wrapper {
+    @apply max-h-96 overflow-y-auto pr-2;
+    scrollbar-width: thin;
+    scrollbar-color: #374151 #1f2937;
+}
+
+.timeline-item {
+    @apply relative flex items-start gap-4 p-3 rounded-lg transition-all duration-200;
+    @apply hover:bg-gray-900/50;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 1.75rem;
+    top: 3rem;
+    bottom: -1.5rem;
+    width: 2px;
+    @apply bg-gray-700;
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.timeline-marker {
+    @apply w-4 h-4 rounded-full bg-gray-600 relative z-10 flex-shrink-0 mt-1;
+    box-shadow: 0 0 0 4px rgba(75, 85, 99, 0.2);
+}
+
+.timeline-marker.active {
+    @apply bg-blue-500;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+.timeline-content {
+    @apply flex-1;
+}
+
+.timeline-header {
+    @apply flex items-center justify-between mb-2;
+}
+
+.timeline-time {
+    @apply text-xs text-gray-400 font-mono;
+}
+
+.timeline-metadata {
+    @apply flex items-center gap-3 text-xs text-gray-500;
+}
+
+.timeline-actions {
+    @apply flex items-center gap-2;
+}
+
+/* Component Inspector Tool */
+.inspector-container {
+    @apply space-y-4;
+}
+
+.inspector-search {
+    @apply relative;
+}
+
+.inspector-search input {
+    @apply w-full pl-10 pr-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-gray-300;
+    @apply focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none;
+}
+
+.inspector-search-icon {
+    @apply absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500;
+}
+
+.inspector-results {
+    @apply space-y-2 max-h-64 overflow-y-auto;
+}
+
+.inspector-item {
+    @apply p-3 bg-gray-900 rounded-lg border border-gray-800 transition-all duration-200;
+    @apply hover:border-gray-600 hover:bg-gray-800/50;
+}
+
+.inspector-item-header {
+    @apply flex items-center justify-between mb-2;
+}
+
+.inspector-item-name {
+    @apply font-mono text-sm text-blue-400;
+}
+
+.inspector-item-actions {
+    @apply flex items-center gap-1;
+}
+
+/* Code Generator Tool */
+.code-generator-container {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.generator-option {
+    @apply p-4 bg-gray-900 rounded-lg border border-gray-800 cursor-pointer transition-all;
+    @apply hover:border-blue-500 hover:bg-gray-800/50;
+}
+
+.generator-option.selected {
+    @apply border-blue-500 bg-blue-900/20;
+}
+
+.generator-icon {
+    @apply w-8 h-8 mb-3 text-gray-400;
+}
+
+.generator-option:hover .generator-icon {
+    @apply text-blue-400;
+}
+
+.generator-title {
+    @apply font-medium text-gray-200 mb-1;
+}
+
+.generator-description {
+    @apply text-xs text-gray-500;
+}
+
+/* Query Builder Tool */
+.query-builder-container {
+    @apply space-y-4;
+}
+
+.query-builder-form {
+    @apply space-y-3;
+}
+
+.query-field {
+    @apply space-y-1;
+}
+
+.query-field label {
+    @apply text-xs font-medium text-gray-400;
+}
+
+.query-field input,
+.query-field select {
+    @apply w-full px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg text-gray-300;
+    @apply focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none;
+}
+
+.query-preview {
+    @apply mt-4 p-3 bg-gray-900 rounded-lg border border-gray-700;
+}
+
+.query-preview-header {
+    @apply text-xs text-gray-400 mb-2;
+}
+
+.query-preview-code {
+    @apply font-mono text-sm text-green-400;
+}
+
+/* Component Relationship Visualizer */
+.relationship-visualizer {
+    @apply bg-gray-900 rounded-lg p-4 min-h-[300px] relative overflow-hidden;
+}
+
+.relationship-graph {
+    @apply w-full h-full;
+}
+
+.relationship-node {
+    @apply absolute p-3 bg-gray-800 rounded-lg border border-gray-700 cursor-pointer;
+    @apply transition-all duration-200 hover:border-blue-500 hover:shadow-lg;
+}
+
+.relationship-line {
+    @apply absolute;
+    stroke: #4b5563;
+    stroke-width: 2;
+    fill: none;
+}
+
+/* Performance Profiler */
+.profiler-container {
+    @apply space-y-4;
+}
+
+.profiler-metrics {
+    @apply grid grid-cols-2 md:grid-cols-4 gap-3;
+}
+
+.metric-card {
+    @apply p-3 bg-gray-900 rounded-lg border border-gray-800 text-center;
+}
+
+.metric-value {
+    @apply text-2xl font-bold mb-1;
+}
+
+.metric-value.good {
+    @apply text-green-400;
+}
+
+.metric-value.warning {
+    @apply text-yellow-400;
+}
+
+.metric-value.danger {
+    @apply text-red-400;
+}
+
+.metric-label {
+    @apply text-xs text-gray-500 uppercase tracking-wider;
+}
+
+/* Console Output */
+.console-container {
+    @apply bg-black rounded-lg p-4 font-mono text-xs;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.console-line {
+    @apply py-0.5;
+}
+
+.console-line.info {
+    @apply text-gray-300;
+}
+
+.console-line.success {
+    @apply text-green-400;
+}
+
+.console-line.warning {
+    @apply text-yellow-400;
+}
+
+.console-line.error {
+    @apply text-red-400;
+}
+
+.console-timestamp {
+    @apply text-gray-600 mr-2;
+}
+
+/* Tool Actions */
+.tool-actions {
+    @apply flex items-center justify-end gap-2 mt-4;
+}
+
+.tool-button {
+    @apply px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200;
+    @apply flex items-center gap-2;
+}
+
+.tool-button-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.tool-button-secondary {
+    @apply bg-gray-700 text-gray-300 hover:bg-gray-600;
+}
+
+.tool-button-success {
+    @apply bg-green-600 text-white hover:bg-green-700;
+}
+
+.tool-button-danger {
+    @apply bg-red-600 text-white hover:bg-red-700;
+}
+
+.tool-button:disabled {
+    @apply opacity-50 cursor-not-allowed;
+}
+
+/* Floating Action Buttons */
+.fab-container {
+    @apply fixed bottom-8 right-8 flex flex-col items-end gap-3;
+    z-index: 100;
+}
+
+.fab-button {
+    @apply w-14 h-14 rounded-full shadow-lg flex items-center justify-center;
+    @apply transition-all duration-200 hover:shadow-xl;
+}
+
+.fab-button-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.fab-menu {
+    @apply flex flex-col items-end gap-2 mb-3;
+}
+
+.fab-menu-item {
+    @apply flex items-center gap-3;
+}
+
+.fab-menu-label {
+    @apply px-3 py-2 bg-gray-900 text-gray-300 rounded-lg shadow-lg text-sm;
+    @apply opacity-0 transform scale-95 transition-all duration-200;
+}
+
+.fab-container.open .fab-menu-label {
+    @apply opacity-100 scale-100;
+}
+
+/* Tool Tabs */
+.tool-tabs {
+    @apply flex border-b border-gray-700;
+}
+
+.tool-tab {
+    @apply px-4 py-2 text-sm font-medium text-gray-400 cursor-pointer;
+    @apply border-b-2 border-transparent transition-all duration-200;
+}
+
+.tool-tab:hover {
+    @apply text-gray-300;
+}
+
+.tool-tab.active {
+    @apply text-blue-400 border-blue-400;
+}
+
+/* Settings Panel */
+.settings-panel {
+    @apply fixed right-0 top-0 h-full w-80 bg-gray-950 border-l border-gray-700;
+    @apply transform translate-x-full transition-transform duration-300;
+    z-index: 200;
+}
+
+.settings-panel.open {
+    @apply translate-x-0;
+}
+
+.settings-header {
+    @apply p-4 border-b border-gray-700 flex items-center justify-between;
+}
+
+.settings-content {
+    @apply p-4 space-y-4 overflow-y-auto;
+    height: calc(100% - 64px);
+}
+
+.setting-group {
+    @apply space-y-3;
+}
+
+.setting-group-title {
+    @apply text-sm font-semibold text-gray-300 mb-2;
+}
+
+.setting-item {
+    @apply flex items-center justify-between;
+}
+
+.setting-label {
+    @apply text-sm text-gray-400;
+}
+
+.setting-toggle {
+    @apply relative inline-flex items-center cursor-pointer;
+}
+
+.setting-toggle input {
+    @apply sr-only;
+}
+
+.setting-toggle-track {
+    @apply w-11 h-6 bg-gray-700 rounded-full transition-colors;
+}
+
+.setting-toggle input:checked + .setting-toggle-track {
+    @apply bg-blue-600;
+}
+
+.setting-toggle-thumb {
+    @apply absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full transition-transform;
+}
+
+.setting-toggle input:checked + .setting-toggle-track + .setting-toggle-thumb {
+    @apply translate-x-5;
+}
+
+/* Tooltips */
+.tool-tooltip {
+    @apply relative;
+}
+
+.tool-tooltip:hover::after {
+    content: attr(data-tooltip);
+    @apply absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2;
+    @apply px-2 py-1 bg-gray-900 text-gray-300 text-xs rounded;
+    @apply whitespace-nowrap z-50;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tool-tooltip:hover::before {
+    content: '';
+    @apply absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1;
+    @apply w-0 h-0 border-4 border-transparent border-t-gray-900;
+}
+
+/* Loading States */
+.tool-loading {
+    @apply relative overflow-hidden;
+}
+
+.tool-loading::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-gray-800 to-transparent;
+    animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Success/Error States */
+.tool-success {
+    @apply border-green-500 bg-green-900/10;
+}
+
+.tool-error {
+    @apply border-red-500 bg-red-900/10;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tools-container {
+        @apply p-4;
+    }
+    
+    .code-generator-container {
+        @apply grid-cols-1;
+    }
+    
+    .profiler-metrics {
+        @apply grid-cols-2;
+    }
+    
+    .settings-panel {
+        @apply w-full;
+    }
+}

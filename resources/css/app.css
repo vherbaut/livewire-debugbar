@@ -2,6 +2,8 @@
 @import url('./components-tab.css');
 @import url('./events-tab.css');
 @import url('./performance-tab.css');
+@import url('./security-tab.css');
+@import url('./tools-tab.css');
 @import url('./properties.css');
 
 /* === BASE STYLES === */
